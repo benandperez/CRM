@@ -3,19 +3,6 @@
 {% block title %}Edit Client{% endblock %}
 
 {% block body %}
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header card-header-primary">
-                        <h4 class="card-title">Edit Client</h4>
-                        <p class="card-category">Complete your Data</p>
-                    </div>
-                    <div class="card-body">
-                        {{ include('client/_form.html.twig', {'button_label': 'Update'}) }}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <h1>Edit Client</h1>
+    {{ include('client/_form.html.twig', {'button_label': 'Update'}) }}
 {% endblock %}

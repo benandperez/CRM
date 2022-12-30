@@ -1,4 +1,275 @@
-{{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+
+<section class="review-section information">
+    <div class="review-header text-center">
+        <h3 class="review-title">CLASIFICACION E INFORMACIÓN GENERAL</h3>
+        <p class="text-muted"></p>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="table-responsive">
+                <table class="table table-bordered table-nowrap review-table mb-0">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.statusUnits) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.statusUnits) }}
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.tower) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.tower) }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.propertyType) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.propertyType) }}
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.level) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.level) }}
+                            </div>
+                        </td>
+                        <td>
+
+                            <div class="form-group">
+                                <label for="validationCustom01">{{ form_label(form.propertyClass) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.propertyClass) }}
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.floor) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.floor) }}
+                            </div>
+                        </td>
+                        <td>
+
+                            <div class="form-group">
+                                <label for="validationCustom01">{{ form_label(form.number) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.number) }}
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.modelType) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.modelType) }}
+                            </div>
+                        </td>
+                        <td>
+
+                            <div class="form-group">
+                                <label for="validationCustom01">{{ form_label(form.model) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.model) }}
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.module) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.module) }}
+                            </div>
+
+                        </td>
+                    </tr>
+                        <td colspan="5">
+
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.street) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.street) }}
+                            </div>
+
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="review-section information">
+    <div class="review-header text-center">
+        <h3 class="review-title">DIMENSIONES DEL LOTE Y AREA DEL INMUEBLE </h3>
+        <p class="text-muted">EN m2</p>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="table-responsive">
+                <table class="table table-bordered table-nowrap review-table mb-0">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.lotArea) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.lotArea) }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.additionalMeters) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.additionalMeters) }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.totalLotArea) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.totalLotArea) }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.closedArea) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.closedArea) }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.openArea) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.openArea) }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.totalArea) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.totalArea) }}
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="review-section information">
+    <div class="review-header text-center">
+        <h3 class="review-title">AMENIDADES DEL INMUEBLE</h3>
+        <p class="text-muted">Infomacion Basica</p>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="table-responsive">
+                <table class="table table-bordered table-nowrap review-table mb-0">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.amenitiesProperty) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.amenitiesProperty)}}
+                            </div>
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.bathrooms) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.bathrooms) }}
+                            </div>
+
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.bedRooms) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.bedRooms) }}
+                            </div>
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.halfBathrooms) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.halfBathrooms)}}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.closets) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.closets) }}
+                            </div>
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.parkingLots) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.parkingLots) }}
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.typeKitchen) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.typeKitchen) }}
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.price) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.price) }}
+                            </div>
+
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="form-group">
+            {{ form_row(form.observations, { 'id': 'editor'}) }}
+        </div>
+    </div>
+</div>
+
+
+
+<button type="submit" class="btn btn-primary pull-right">{{ button_label|default('Save') }}</button>
+<a href="{{ path('app_units_index') }}" class="btn btn-success btn-round" class="btn btn-success btn-round">back to
+    list</a>
+<div class="clearfix"></div>
 {{ form_end(form) }}
