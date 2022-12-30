@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Units{% endblock %}
+
+{% block body %}
+    <h1>Units</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ unit.id }}</td>
+            </tr>
+            <tr>
+                <th>Number</th>
+                <td>{{ unit.number }}</td>
+            </tr>
+            <tr>
+                <th>Model</th>
+                <td>{{ unit.model ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Tower</th>
+                <td>{{ unit.tower }}</td>
+            </tr>
+            <tr>
+                <th>Level</th>
+                <td>{{ unit.level }}</td>
+            </tr>
+            <tr>
+                <th>Floor</th>
+                <td>{{ unit.floor }}</td>
+            </tr>
+            <tr>
+                <th>ModelType</th>
+                <td>{{ unit.modelType }}</td>
+            </tr>
+            <tr>
+                <th>Module</th>
+                <td>{{ unit.module }}</td>
+            </tr>
+            <tr>
+                <th>Street</th>
+                <td>{{ unit.street }}</td>
+            </tr>
+            <tr>
+                <th>LotArea</th>
+                <td>{{ unit.lotArea }}</td>
+            </tr>
+            <tr>
+                <th>AdditionalMeters</th>
+                <td>{{ unit.additionalMeters }}</td>
+            </tr>
+            <tr>
+                <th>TotalLotArea</th>
+                <td>{{ unit.totalLotArea }}</td>
+            </tr>
+            <tr>
+                <th>ClosedArea</th>
+                <td>{{ unit.closedArea }}</td>
+            </tr>
+            <tr>
+                <th>OpenArea</th>
+                <td>{{ unit.openArea }}</td>
+            </tr>
+            <tr>
+                <th>TotalArea</th>
+                <td>{{ unit.totalArea }}</td>
+            </tr>
+            <tr>
+                <th>BedRooms</th>
+                <td>{{ unit.bedRooms }}</td>
+            </tr>
+            <tr>
+                <th>Closets</th>
+                <td>{{ unit.closets }}</td>
+            </tr>
+            <tr>
+                <th>Bathrooms</th>
+                <td>{{ unit.bathrooms }}</td>
+            </tr>
+            <tr>
+                <th>HalfBathrooms</th>
+                <td>{{ unit.halfBathrooms }}</td>
+            </tr>
+            <tr>
+                <th>ParkingLots</th>
+                <td>{{ unit.parkingLots }}</td>
+            </tr>
+            <tr>
+                <th>Observations</th>
+                <td>{{ unit.observations }}</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>{{ unit.price }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_units_index') }}">back to list</a>
+
+    <a href="{{ path('app_units_edit', {'id': unit.id}) }}">edit</a>
+
+    {{ include('units/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}StatusUnits{% endblock %}
+
+{% block body %}
+    <h1>StatusUnits</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ status_unit.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ status_unit.name }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ status_unit.status ? 'Yes' : 'No' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_status_units_index') }}">back to list</a>
+
+    <a href="{{ path('app_status_units_edit', {'id': status_unit.id}) }}">edit</a>
+
+    {{ include('status_units/_delete_form.html.twig') }}
+{% endblock %}

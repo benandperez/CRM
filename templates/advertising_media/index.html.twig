@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AdvertisingMedia index{% endblock %}
+
+{% block body %}
+    <h1>AdvertisingMedia index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for advertising_media in advertising_media %}
+            <tr>
+                <td>{{ advertising_media.id }}</td>
+                <td>{{ advertising_media.name }}</td>
+                <td>{{ advertising_media.status ? 'Yes' : 'No' }}</td>
+                <td>
+                    <a href="{{ path('app_advertising_media_show', {'id': advertising_media.id}) }}">show</a>
+                    <a href="{{ path('app_advertising_media_edit', {'id': advertising_media.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_advertising_media_new') }}">Create new</a>
+{% endblock %}

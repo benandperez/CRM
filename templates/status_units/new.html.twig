@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New StatusUnits{% endblock %}
+
+{% block body %}
+    <h1>Create new StatusUnits</h1>
+
+    {{ include('status_units/_form.html.twig') }}
+
+    <a href="{{ path('app_status_units_index') }}">back to list</a>
+{% endblock %}

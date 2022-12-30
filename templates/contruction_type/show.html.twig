@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ContructionType{% endblock %}
+
+{% block body %}
+    <h1>ContructionType</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ contruction_type.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ contruction_type.name }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ contruction_type.status ? 'Yes' : 'No' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_contruction_type_index') }}">back to list</a>
+
+    <a href="{{ path('app_contruction_type_edit', {'id': contruction_type.id}) }}">edit</a>
+
+    {{ include('contruction_type/_delete_form.html.twig') }}
+{% endblock %}

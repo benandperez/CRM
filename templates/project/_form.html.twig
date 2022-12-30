@@ -1,0 +1,66 @@
+
+{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+<div class="row">
+    <div class="col-sm-8">
+        <div class="form-group">
+            {{ form_row(form.name) }}
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="form-group">
+            {{ form_row(form.shortName) }}
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="form-group">
+            <label>{{ form_label(form.separatesWith) }}</label>
+            <div class="input-group">
+                <span class="input-group-text">$</span>
+                {{ form_widget(form.separatesWith) }}
+                <span class="input-group-text">.00</span>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="form-group">
+            {{ form_row(form.constructionType) }}
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            {{ form_row(form.ubication) }}
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="form-group">
+            {{ form_row(form.projectFinishes, { 'id': 'editor'}) }}
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="form-group">
+            {{ form_row(form.amenities) }}
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            {{ form_row(form.elevators) }}
+        </div>
+    </div>
+</div>
+
+<button type="submit" class="btn btn-primary pull-right">{{ button_label|default('Save') }}</button>
+<a href="{{ path('app_project_index') }}" class="btn btn-success btn-round" class="btn btn-success btn-round">back to
+    list</a>
+<div class="clearfix"></div>
+{#    <button class="btn">{{ button_label|default('Save') }}</button>#}
+{{ form_end(form) }}

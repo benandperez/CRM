@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ContructionType index{% endblock %}
+
+{% block body %}
+    <h1>ContructionType index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for contruction_type in contruction_types %}
+            <tr>
+                <td>{{ contruction_type.id }}</td>
+                <td>{{ contruction_type.name }}</td>
+                <td>{{ contruction_type.status ? 'Yes' : 'No' }}</td>
+                <td>
+                    <a href="{{ path('app_contruction_type_show', {'id': contruction_type.id}) }}">show</a>
+                    <a href="{{ path('app_contruction_type_edit', {'id': contruction_type.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_contruction_type_new') }}">Create new</a>
+{% endblock %}

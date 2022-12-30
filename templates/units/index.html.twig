@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Units index{% endblock %}
+
+{% block body %}
+    <h1>Units index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Number</th>
+                <th>Model</th>
+                <th>Tower</th>
+                <th>Level</th>
+                <th>Floor</th>
+                <th>ModelType</th>
+                <th>Module</th>
+                <th>Street</th>
+                <th>LotArea</th>
+                <th>AdditionalMeters</th>
+                <th>TotalLotArea</th>
+                <th>ClosedArea</th>
+                <th>OpenArea</th>
+                <th>TotalArea</th>
+                <th>BedRooms</th>
+                <th>Closets</th>
+                <th>Bathrooms</th>
+                <th>HalfBathrooms</th>
+                <th>ParkingLots</th>
+                <th>Observations</th>
+                <th>Price</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for unit in units %}
+            <tr>
+                <td>{{ unit.id }}</td>
+                <td>{{ unit.number }}</td>
+                <td>{{ unit.model ? 'Yes' : 'No' }}</td>
+                <td>{{ unit.tower }}</td>
+                <td>{{ unit.level }}</td>
+                <td>{{ unit.floor }}</td>
+                <td>{{ unit.modelType }}</td>
+                <td>{{ unit.module }}</td>
+                <td>{{ unit.street }}</td>
+                <td>{{ unit.lotArea }}</td>
+                <td>{{ unit.additionalMeters }}</td>
+                <td>{{ unit.totalLotArea }}</td>
+                <td>{{ unit.closedArea }}</td>
+                <td>{{ unit.openArea }}</td>
+                <td>{{ unit.totalArea }}</td>
+                <td>{{ unit.bedRooms }}</td>
+                <td>{{ unit.closets }}</td>
+                <td>{{ unit.bathrooms }}</td>
+                <td>{{ unit.halfBathrooms }}</td>
+                <td>{{ unit.parkingLots }}</td>
+                <td>{{ unit.observations }}</td>
+                <td>{{ unit.price }}</td>
+                <td>
+                    <a href="{{ path('app_units_show', {'id': unit.id}) }}">show</a>
+                    <a href="{{ path('app_units_edit', {'id': unit.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="23">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_units_new') }}">Create new</a>
+{% endblock %}

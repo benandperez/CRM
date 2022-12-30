@@ -1,0 +1,196 @@
+{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+
+<section class="review-section information">
+    <div class="review-header text-center">
+        <h3 class="review-title">PROYECTO Y MEDIO DE DIFUSION O PUBLICITARIO</h3>
+        <p class="text-muted">Infomacion Basica</p>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="table-responsive">
+                <table class="table table-bordered table-nowrap review-table mb-0">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.project) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.project) }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.advertisingMedia) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.advertisingMedia) }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.interestLevel) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.interestLevel) }}
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="review-section information">
+    <div class="review-header text-center">
+        <h3 class="review-title">DATOS DE LOS COMPRADORES</h3>
+        <p class="text-muted">PROSPECTO PRIMER COMPRADOR</p>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="table-responsive">
+                <table class="table table-bordered table-nowrap review-table mb-0">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.clientType) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.clientType) }}
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.secondName) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.secondName) }}
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.landline) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.landline) }}
+                            </div>
+
+
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.country) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.country) }}
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.LastName) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.LastName) }}
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.cellPhone) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.cellPhone) }}
+                            </div>
+
+
+                        </td>
+                        <td>
+
+                            <div class="form-group">
+                                <label for="validationCustom01">{{ form_label(form.firstName) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.firstName) }}
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.secondLastName) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.secondLastName) }}
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.email) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.email) }}
+                            </div>
+
+
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="review-section information">
+    <div class="review-header text-center">
+        <h3 class="review-title">PROXIMO CONTACTO, EJECUTIVO Y OBSERVACIONES</h3>
+        <p class="text-muted">Infomacion Basica</p>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="table-responsive">
+                <table class="table table-bordered table-nowrap review-table mb-0">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.nextContact) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.nextContact, {'attr': {'style': 'width: 100%'}}) }}
+{#                                {{ form_widget(form.nextContact)}}#}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.programmedActivity) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.programmedActivity) }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label for="name">{{ form_label(form.user) }}</label>
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(form.user) }}
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="form-group">
+            {{ form_row(form.observations, { 'id': 'editor'}) }}
+        </div>
+    </div>
+</div>
+
+
+
+<button type="submit" class="btn btn-primary pull-right">{{ button_label|default('Save') }}</button>
+<a href="{{ path('app_client_index') }}" class="btn btn-success btn-round" class="btn btn-success btn-round">back to
+    list</a>
+<div class="clearfix"></div>
+
+{{ form_end(form) }}

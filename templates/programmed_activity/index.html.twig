@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProgrammedActivity index{% endblock %}
+
+{% block body %}
+    <h1>ProgrammedActivity index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for programmed_activity in programmed_activities %}
+            <tr>
+                <td>{{ programmed_activity.id }}</td>
+                <td>{{ programmed_activity.name }}</td>
+                <td>{{ programmed_activity.status ? 'Yes' : 'No' }}</td>
+                <td>
+                    <a href="{{ path('app_programmed_activity_show', {'id': programmed_activity.id}) }}">show</a>
+                    <a href="{{ path('app_programmed_activity_edit', {'id': programmed_activity.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_programmed_activity_new') }}">Create new</a>
+{% endblock %}

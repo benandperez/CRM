@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Client index{% endblock %}
+
+{% block body %}
+    <h1>Client index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>NextContact</th>
+                <th>FirstName</th>
+                <th>SecondName</th>
+                <th>LastName</th>
+                <th>SecondLastName</th>
+                <th>Landline</th>
+                <th>CellPhone</th>
+                <th>Email</th>
+                <th>Observations</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for client in clients %}
+            <tr>
+                <td>{{ client.id }}</td>
+                <td>{{ client.nextContact ? client.nextContact|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ client.firstName }}</td>
+                <td>{{ client.secondName }}</td>
+                <td>{{ client.LastName }}</td>
+                <td>{{ client.secondLastName }}</td>
+                <td>{{ client.landline }}</td>
+                <td>{{ client.cellPhone }}</td>
+                <td>{{ client.email }}</td>
+                <td>{{ client.observations }}</td>
+                <td>
+                    <a href="{{ path('app_client_show', {'id': client.id}) }}">show</a>
+                    <a href="{{ path('app_client_edit', {'id': client.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="11">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="col-auto float-end ms-auto">
+
+        <a href="{{ path('app_client_new') }}" class="btn add-btn" ><i class="fa fa-plus"></i> Create new</a>
+    </div>
+
+{% endblock %}
