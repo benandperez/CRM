@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="description" content="Smarthr - Bootstrap Admin Template">
+    <meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern, accounts, invoice, html5, responsive, CRM, Projects">
+    <meta name="author" content="Dreamguys - Bootstrap Admin Template">
+    <meta name="robots" content="noindex, nofollow">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+    {% block stylesheets %}
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/logos/favicon.png') }}">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+
+        <!-- Fontawesome CSS -->
+        <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
+
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+        <!-- Login CSS -->
+        <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+
+    {% endblock %}
+
+
+</head>
+<body class="account-page">
+    <div class="container-fluid">
+        <div class="row">
+            <div id="form-section" class="col-sm-12 col-lg-5">
+                <div class="account-logo">
+{#                    <a href=""><img src="{{ asset('img/logos/logoLogin.png') }}" alt="Logo"></a>#}
+                </div>
+                {% block body %}{% endblock %}
+            </div>
+            <div id="background-section" class="col-lg-7 d-none-lg d-block"></div>
+        </div>
+    </div>
+
+
+    {% block javascripts %}
+        <script src="{{ asset('js/html5shiv.min.js') }}"></script>
+        <script src="{{ asset('js/respond.min.js') }}"></script>
+        <!-- jQuery -->
+        <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
+
+        <!-- Bootstrap Core JS -->
+        <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+
+        <!-- Custom JS -->
+        <script src="{{ asset('js/app.js') }}"></script>
+    {% endblock %}
+</body>
+</html>

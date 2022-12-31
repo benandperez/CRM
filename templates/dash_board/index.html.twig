@@ -2,9 +2,42 @@
 
 {% block title %}Hello DashBoardController!{% endblock %}
 
-{% block content %}
+{% block body %}
     <div class="container-fluid">
         <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-info card-header-icon">
+                        <div class="card-icon">
+                            <i class="fa fa-building-o"></i>
+                        </div>
+                        <p class="card-category">Lo hacemos por ti</p>
+                        <h3 class="card-title">Nuestros projectos
+                        </h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <a href="{{path('app_project_index')}}">Get More Space Project...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-info card-header-icon">
+                        <div class="card-icon">
+                            <i class="fa fa-home"></i>
+                        </div>
+                        <p class="card-category">Lo hacemos por ti</p>
+                        <h3 class="card-title">Nuestras Unidades</h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <a href="{{ path('app_units_index') }}">Get Units</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card card-stats">
                     <div class="card-header card-header-info card-header-icon">
@@ -12,64 +45,31 @@
                             <i class="fa fa-user"></i>
                         </div>
                         <p class="card-category">Lo hacemos por ti</p>
-                        <h3 class="card-title">Nuestros empleados
-                        </h3>
+                        <h3 class="card-title">Nuestros Clietes</h3>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
-                            <a href="{{path('app_project_index')}}">Get More Space Employees...</a>
+                            <a href="{{ path('app_client_index') }}">Get Client</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="card card-stats">
-                    <div class="card-header card-header-info card-header-icon">
-                        <div class="card-icon">
-                            <i class="fa fa-facebook"></i>
-                        </div>
-                        <p class="card-category">Buscanos en...</p>
-                        <h3 class="card-title">Facebook</h3>
-                    </div>
-                    <div class="card-footer">
-                        <div class="stats">
-                            <a href="https://m.facebook.com/OneLinkBPOCol/?locale2=es_LA" target="_blank">Get Page</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="card card-stats">
-                    <div class="card-header card-header-info card-header-icon">
-                        <div class="card-icon">
-                            <i class="fa fa-instagram"></i>
-                        </div>
-                        <p class="card-category">Buscanos en...</p>
-                        <h3 class="card-title">Instagram</h3>
-                    </div>
-                    <div class="card-footer">
-                        <div class="stats">
-                            <a href="https://www.instagram.com/onelinkbpocol/?hl=es" target="_blank">Get Page</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="card card-stats">
-                    <div class="card-header card-header-info card-header-icon">
-                        <div class="card-icon">
-                            <i class="fa fa-twitter"></i>
-                        </div>
-                        <p class="card-category">Buscanos en...</p>
-                        <h3 class="card-title">Twitter</h3>
-                    </div>
-                    <div class="card-footer">
-                        <div class="stats">
-                            <a href="https://twitter.com/onelinkbpo?lang=es" target="_blank">Get Page</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+{#            <div class="col-lg-3 col-md-6 col-sm-6">#}
+{#                <div class="card card-stats">#}
+{#                    <div class="card-header card-header-info card-header-icon">#}
+{#                        <div class="card-icon">#}
+{#                            <i class="fa fa-twitter"></i>#}
+{#                        </div>#}
+{#                        <p class="card-category">Buscanos en...</p>#}
+{#                        <h3 class="card-title">Twitter</h3>#}
+{#                    </div>#}
+{#                    <div class="card-footer">#}
+{#                        <div class="stats">#}
+{#                            <a href="https://twitter.com/onelinkbpo?lang=es" target="_blank">Get Page</a>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
         </div>
         <div class="row">
             <div class="col-lg-12 col-md-12">
