@@ -11,6 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\HasLifecycleCallbacks]
 class Client
 {
+    
     use TimeStampableEntity;
     #[ORM\Id]
     #[ORM\GeneratedValue]

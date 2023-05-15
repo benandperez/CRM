@@ -12,7 +12,6 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\HasLifecycleCallbacks]
 class AdvertisingMedia
 {
-
     use TimeStampableEntity;
     #[ORM\Id]
     #[ORM\GeneratedValue]
